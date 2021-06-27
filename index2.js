@@ -4,19 +4,18 @@
  1. Use ternary operator to assign "male" or "female" string to a variable based on the value of a 'isMale' parameter
 */
 
-function ex1(isMale) {
+function finder(isMale) {
   const string = isMale ? "male" : "female"
   return string
 }
-
-console.log(ex1(true)) // expected "male"
-console.log(ex1(false)) // expected "female"
+console.log(finder(true)) // expected "male"
+console.log(finder(false)) // expected "female"
 
 /*
  2. Write code to check from two given integers a and b whether one of them is 8 or their sum or difference is 8.
 */
 
-function ex2(a, b) {
+function checker(a, b) {
   if (a == 8 || b == 8) {
     return true;
   }
@@ -27,27 +26,23 @@ function ex2(a, b) {
   }
   return false;
 }
-
-
-console.log(ex2(8, 0)) // a is 8 -> expected: true
-console.log(ex2(15, 7)) // 15 - 7 = 8 -> expected: true
-console.log(ex2(7, 1)) // 7 + 1 expected: true
-
-console.log(ex2(7, 2)) // expected: false
+console.log(checker(8, 0)) // a is 8 -> expected: true
+console.log(checker(15, 7)) // 15 - 7 = 8 -> expected: true
+console.log(checker(7, 1)) // 7 + 1 expected: true
+console.log(checker(7, 2)) // expected: false
 
 /*
   3. Return a variable that concatenates two strings a and b.
 */
-function ex3(a, b) {
+function twoStrings(a, b) {
   return a + b
 }
-
-console.log(ex3("Strive ", "School")) // expected: "Strive School"
+console.log(twoStrings("Strive ", "School")) // expected: "Strive School"
 
 /*
 4.Write a JavaScript conditional statement to sort three numbers in ascending order. Display the result in the console.
 */
-function ex4(a,b,c) {
+function ascenOrder(a,b,c) {
   if(a < b && a < c && b < c) {
     console.log(a, b ,c)
    } 
@@ -61,59 +56,61 @@ function ex4(a,b,c) {
   }
   
 }
-
-console.log(ex4(8,10,3)) // expected: [3, 8, 10]
+console.log(ascenOrder(8,10,3)) // expected: [3, 8, 10]
 
 
 /*
  5. Write code to find the average of two given integers.
 */
-function ex5(a,b) {
-  return ((a+b)/2)
-}
+let d = 4;
+let h = 5;
+let average = (d + h) / 2;
+console.log(average);
+
 
 /* 
   6. Find the longest of two given strings
 */
-function ex6(a,b) {
-  return a > b ? a : b
+let str1 = "strive School";
+let str2 = "FullStack";
+if (str1.length > str2.length) {
+  console.log("str1 is longer");
+} else {
+  console.log("str2 is longer");
 }
-
 /*
  7. Write code to check whether a value is a number or not.
 */
-function ex7(value) {
-  return (typeof value === 'number')
+let string = "hello!"
+let number = 50
+console.log(typeof string);
+if (typeof number === "number") {
+  console.log(true);
+} else {
+  console.log(false);
 }
 
 /*
  8. Write code to calculate the percentage (%) of a number.
         Ex.: 20% of 400 is 80
 */
-function ex8(perc, num) {
+let num = 400;
+let per = 20;
+let percentage = (400 / 100) * 20;
+console.log(percentage);
+/*function ex8(perc, num) {
   return (perc/100) * num
 }
-
  console.log(ex8(20, 400)) // expected: 80
+ */
 
 /*
  9. Write code to check if a given number is even or odd.
 */
-function ex9(num) {
+function evenOdd(num) {
   return num%2 === 0 ? "even" : "odd"
 }
 
-console.log(ex9(4)) // expected: "even"
-console.log(ex9(9)) // expected: "odd"
+console.log(evenOdd(4)) // expected: "even"
+console.log(evenOdd(9)) // expected: "odd"
 
-module.exports = { 
-  ex1, 
-  ex2, 
-  ex3, 
-  ex4, 
-  ex5, 
-  ex6, 
-  ex7, 
-  ex8, 
-  ex9 
-}
